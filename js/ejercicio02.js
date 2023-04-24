@@ -14,22 +14,39 @@ de “número erróneo”. Si el número ingresado no es válido mostrar el mens
 
 */
 
-let nota = parseInt(prompt("Ingrese la nota (0 - 10)"))
+let nota = parseInt(prompt("Ingrese la nota (0 - 10)"));
 
 if (isNaN(nota)) {
-    document.write("Introduce un número válido");
-} else if (nota >= 0 && nota <= 2) {
-    alert("Muy deficiente");
-} else if (nota >= 3 && nota <= 4) {
-    alert("Insuficiente");
-} else if (nota >= 5 && nota <= 6) {
-    alert("Suficiente");
-} else if (nota === 7) {
-    alert("Bien");
-} else if (nota >= 8 && nota <= 9) {
-    alert("Notable");
-} else if (nota === 10) {
-    alert("Sobresaliente");
+    alert("Introduce un número válido");
+} else if((nota >= 0) && (nota <= 10) ){
+    switch (nota) {
+        case 0:
+        case 1:
+        case 2:
+            alert("Muy deficiente");
+            break;
+        case 3:
+        case 4:
+            alert("Insuficiente");
+            break;
+        case 5:
+        case 6:
+            alert("Suficiente");
+            break;
+        case 7:
+            alert("Bien");
+            break;
+        case 8:
+        case 9:
+            alert("Notable");
+            break;
+        case 10:
+            alert("Sobresaliente");
+            break;
+        default:
+            alert("ERROR");
+            break;
+    }
 } else {
-    document.write("Número erróneo");
+    alert("Introduce un número entre 0 y 10");
 }
