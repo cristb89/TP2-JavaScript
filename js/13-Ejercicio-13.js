@@ -1,0 +1,1 @@
+console.log(prompt("Ingrese texto").toUpperCase());
